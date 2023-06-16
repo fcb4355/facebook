@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Caveat:wght@400;600;700&family=Coming+Soon&family=Delicious+Handrawn&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   font-size: 17px;
+}
+
+a {
+   text-decoration: none;
+}
+
+
+:root {
+   --main-color: #1877f2;
+   --second-color: #f0f2f5;
+   --white-color: #fff;
+   --button-color: #36a420;
+   --black-color: #000;
+}
+
+body {
+   height: 100vh;
+   background-color: var(--second-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+@media(max-width:970px) {
+   .container {
+      flex-direction: column;
+      gap: 0;
+   }
+}
+
+.container .left {
+   margin-bottom: 140px;
+   width: 500px;
+   display: flex;
+   flex-direction: column;
+}
+
+@media(max-width:480px) {
+   .container .left {
+      width: 300px;
+   }
+}
+
+@media(max-width:970px) {
+   .container .left {
+      margin: 0 0 20px 0;
+   }
+}
+
+.container .left img {
+   width: 380px;
+}
+
+.container .left p {
+   color: var(--black-color);
+   font-size: 25px;
+   padding-left: 40px;
+   font-weight: 600;
+}
+
+@media(max-width:970px) {
+   .container .left img {
+      width: 280px;
+      margin: 0 auto;
+   }
+
+   .container .left p {
+      text-align: center;
+      padding: 0;
+   }
+}
+
+@media(max-width:480px) {
+   .container .left p {
+      font-size: 20px;
+   }
+}
+
+.container .right {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.container .right form {
+   background-color: var(--white-color);
+   padding: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+   border-radius: 10px;
+   max-width: 400px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.container .right form .err {
+   text-align: center;
+   color: red;
+   max-height: 0;
+   visibility: hidden;
+   overflow: hidden;
+   transition: .3s ease-in-out;
+}
+
+.container .right form .err.show_Err {
+   max-height: 100px;
+   visibility: visible;
+}
+
+
+.container .right form .email {
+   width: 100%;
+   padding: 8px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   outline: none;
+   margin: 5px 0;
+}
+
+.container .right form .password {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 3px;
+   margin: 8px 0;
+}
+
+.container .right form .password i {
+   background-color: #ddd;
+   color: var(--black-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   cursor: pointer;
+   width: 30px;
+   height: 30px;
+   transition: .3s ease-in;
+}
+
+
+.container .right form .password i:hover {
+   background-color: #bbb;
+}
+
+.container .right form .password input {
+   width: 100%;
+   padding-left: 4px;
+   border: none;
+   outline: none;
+   margin: 5px 0;
+}
+
+hr {
+   margin: 20px 0;
+}
+
+
+
+.container .right form .btn {
+   width: 100%;
+   padding: 9px;
+   margin: 10px 0;
+   background-color: var(--main-color);
+   color: var(--white-color);
+   border: none;
+   outline: none;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.container .right form a {
+   color: var(--main-color);
+   text-decoration: none;
+   width: fit-content;
+   margin: 20px auto 0 auto;
+   font-size: 15px;
+}
+
+.container .right form a:hover {
+   text-decoration: underline;
+}
+
+.container .right form .new {
+   background-color: var(--button-color);
+   color: var(--white-color);
+   border: none;
+   padding: 10px;
+   width: 250px;
+   border-radius: 8px;
+   text-align: center;
+   text-decoration: none !important;
+   margin: auto;
+   cursor: pointer;
+}
+
+.creatPage {
+   width: 90%;
+   margin: auto;
+}
+
+.creatPage a,
+.creatPage span {
+   font-size: 15px;
+}
+
+.creatPage a {
+   font-weight: 700;
+   color: var(--black-color);
+}

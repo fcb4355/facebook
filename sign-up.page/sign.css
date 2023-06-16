@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Caveat:wght@400;600;700&family=Coming+Soon&family=Delicious+Handrawn&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   font-size: 17px;
+}
+
+a {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+:root {
+   --main-color: #1877f2;
+   --second-color: #f0f2f5;
+   --white-color: #fff;
+   --button-color: #36a420;
+   --black-color: #000;
+}
+
+.popup-box {
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, .3);
+   opacity: 0;
+   pointer-events: none;
+   transition: .3s ease-in-out;
+}
+
+.popup-box.show {
+   opacity: 1;
+   pointer-events: all;
+}
+
+.popup {
+   position: absolute;
+   background-color: var(--white-color);
+   padding: 20px;
+   border-radius: 10px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 250px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+
+.popup i {
+   font-size: 60px;
+}
+
+body {
+   width: 100%;
+   height: 100vh;
+   background-color: var(--second-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container-sign {
+   display: flex;
+   flex-direction: column;
+   width: 500px;
+}
+
+.container-sign img {
+   width: 300px;
+   margin: auto;
+}
+
+.container-sign .main {
+   display: flex;
+   border-radius: 10px;
+   flex-direction: column;
+   gap: 10px;
+   background-color: var(--white-color);
+}
+
+.container-sign .main .header {
+   text-align: center;
+   padding: 10px;
+   border-bottom: 1px solid #ebebeb;
+}
+
+.container-sign .main .header h1 {
+   font-size: 25px;
+}
+
+.container-sign .main form {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   width: 100%;
+   padding: 10px;
+}
+
+.container-sign .main .error {
+   transition: .3s ease-in-out;
+   color: red;
+   text-align: center;
+   max-height: 0;
+   overflow: hidden;
+   visibility: hidden;
+}
+
+.container-sign .main .error.showErr {
+   max-height: 100px;
+   visibility: visible;
+}
+
+.container-sign .main form .full-name {
+   width: 100%;
+   display: flex;
+   gap: 10px;
+}
+
+@media (max-width:400px) {
+   .container-sign .main form .full-name {
+      flex-direction: column;
+   }
+}
+
+.container-sign .main form .full-name input {
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   outline: none;
+}
+
+.container-sign .main form .mail-phone {
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   outline: none;
+}
+
+.container-sign .main form .pas-sword {
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   outline: none;
+}
+
+.container-sign .main form .birthday {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.container-sign .main form .birthday select {
+   width: 100%;
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   outline: none;
+   cursor: pointer;
+}
+
+.container-sign .main form .gender {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+}
+
+.container-sign .main form .gender .sex {
+   border: 1px solid #ccc;
+   padding: 5px;
+   display: flex;
+   align-items: center;
+}
+
+.container-sign .main form .gender .sex label {
+   padding-right: 20px;
+}
+
+.container-sign .main form p {
+   color: var(--black-color);
+   font-size: 14px;
+}
+
+.container-sign .main form a {
+   color: var(--main-color);
+   font-size: 14px;
+}
+
+.container-sign .main form .signBtn {
+   background-color: var(--button-color);
+   width: 40%;
+   border-radius: 4px;
+   margin: 10px auto;
+   outline: none;
+   border: none;
+   padding: 7px;
+   color: var(--white-color);
+   cursor: pointer;
+}
+
+.container-sign .main form .already {
+   text-align: center;
+   margin: 10px 0;
+}
